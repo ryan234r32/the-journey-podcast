@@ -19,6 +19,7 @@ import os
 import sys
 import uuid
 import html
+import re
 import shutil
 import subprocess
 import datetime as dt
@@ -127,6 +128,17 @@ def sub(parent, tag, text=None, **attrs):
     return el
 
 
+def text_to_html(text):
+    """純文字（含換行/空行）→ HTML 段落，給 description / content:encoded，讓各平台正確換行。"""
+    text = (text or "").strip()
+    blocks = []
+    for para in re.split(r"\n\s*\n", text):
+        lines = [html.escape(ln.strip()) for ln in para.split("\n") if ln.strip()]
+        if lines:
+            blocks.append("<p>" + "<br />".join(lines) + "</p>")
+    return "".join(blocks)
+
+
 # ---------------------------------------------------------------------------
 # 合規檢查
 # ---------------------------------------------------------------------------
@@ -195,10 +207,18 @@ def build_feed(cfg, episodes):
     # 不可在此重複手動宣告（否則 <rss> 會出現重複 xmlns 屬性，導致不合法 XML）。
     channel = sub(rss, "channel")
 
+    cdata_map = {}
+    def cdata(parent, tag, raw):
+        el = ET.SubElement(parent, tag)
+        token = f"@@CDATA{len(cdata_map)}@@"
+        cdata_map[token] = text_to_html(raw)
+        el.text = token
+        return el
+
     sub(channel, "title", cfg.get("title"))
     sub(channel, "link", website)
     sub(channel, "language", cfg.get("language"))
-    sub(channel, "description", cfg.get("description"))
+    cdata(channel, "description", cfg.get("description"))
     sub(channel, "copyright", copyright_)
     sub(channel, "generator", "podcast-static-publisher")
     sub(channel, "lastBuildDate", rfc822(dt.datetime.now(TZ_TW)))
@@ -244,8 +264,8 @@ def build_feed(cfg, episodes):
         item = sub(channel, "item")
         sub(item, "title", ep.get("title"))
         sub(item, "link", audio_url)
-        sub(item, "description", ep.get("description", ""))
-        sub(item, q("content", "encoded"), ep.get("description", ""))
+        cdata(item, "description", ep.get("description", ""))
+        cdata(item, q("content", "encoded"), ep.get("description", ""))
         sub(item, "enclosure", url=audio_url, length=size, type=mime)
         sub(item, "guid", guid, isPermaLink="false")
         if pub:
@@ -260,7 +280,7 @@ def build_feed(cfg, episodes):
         if ep.get("season"):
             sub(item, q("itunes", "season"), ep["season"])
 
-    return rss
+    return rss, cdata_map
 
 
 def main():
@@ -284,11 +304,15 @@ def main():
         print("\n✅ 檢查通過，可以產生 feed。")
         return
 
-    rss = build_feed(cfg, episodes)
-    tree = ET.ElementTree(rss)
-    ET.indent(tree, space="  ")
+    rss, cdata_map = build_feed(cfg, episodes)
+    ET.indent(rss, space="  ")
+    xml_str = ET.tostring(rss, encoding="unicode")
+    for token, html_block in cdata_map.items():
+        xml_str = xml_str.replace(token, f"<![CDATA[{html_block}]]>")
     os.makedirs(DOCS_DIR, exist_ok=True)
-    tree.write(FEED_OUT, encoding="utf-8", xml_declaration=True)
+    with open(FEED_OUT, "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="utf-8"?>\n')
+        f.write(xml_str + "\n")
 
     # 把封面複製進 docs/assets/，讓 GitHub Pages 一起服務
     cover_src = os.path.join(ROOT, cfg.get("cover_image", "assets/cover.jpg"))
