@@ -3,82 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>在路上 The Journey — 收聽全平台</title>
-<meta name="description" content="Ryan 和 Johnny 邀請企業家與 Wellness 專家，聊聊如何在追求夢想的同時維持身心最好的狀態。">
+<title>在路上 The Journey — 所有連結</title>
+<meta name="description" content="Ryan 和 Johnny 邀請企業家與 Wellness 專家，聊聊如何在追求夢想的同時維持身心最好的狀態。收聽 Podcast、看影片、追蹤我們。">
+<meta name="theme-color" content="#10243f">
 <meta property="og:title" content="在路上 The Journey">
-<meta property="og:description" content="在追求夢想的同時，維持身心最好的狀態。選擇你愛用的平台收聽。">
+<meta property="og:description" content="在追求夢想的同時，維持身心最好的狀態。一頁找到所有收聽與追蹤連結。">
 <meta property="og:image" content="https://ryan234r32.github.io/the-journey-podcast/assets/cover.jpg">
 <style>
-  :root{ --ink:#1a1a2e; --muted:#6b7280; --line:#e5e7eb; --bg:#ffffff; }
-  *{ box-sizing:border-box; }
+  :root{
+    --ink:#10243f; --muted:#7b8794; --line:#eceff3;
+    --card:#ffffff; --shadow:0 6px 18px rgba(16,36,63,.08);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
   body{
-    margin:0; background:var(--bg); color:var(--ink);
+    min-height:100vh;
     font-family:-apple-system,"PingFang TC","Noto Sans TC","Helvetica Neue",Arial,sans-serif;
-    -webkit-font-smoothing:antialiased; line-height:1.6;
+    color:var(--ink); -webkit-font-smoothing:antialiased;
+    background:linear-gradient(180deg,#dbe7f5 0%,#eaf0f6 32%,#f6f4ef 100%);
+    background-attachment:fixed;
   }
-  .wrap{ max-width:520px; margin:0 auto; padding:48px 22px 64px; text-align:center; }
-  .cover{
-    width:180px; height:180px; border-radius:22px; object-fit:cover;
-    box-shadow:0 10px 30px rgba(26,26,46,.14); margin:0 auto 22px;
+  .wrap{ max-width:480px; margin:0 auto; padding:40px 20px 56px; }
+  .profile{ text-align:center; margin-bottom:26px; }
+  .avatar{
+    width:108px; height:108px; border-radius:50%; object-fit:cover;
+    border:4px solid #fff; box-shadow:var(--shadow); margin-bottom:14px;
   }
-  h1{ font-size:30px; margin:0 0 6px; letter-spacing:.5px; }
-  .by{ color:var(--muted); font-size:15px; margin:0 0 18px; }
-  .tagline{ color:#374151; font-size:15px; margin:0 auto 30px; max-width:430px; }
-  .listen-label{
-    font-size:12px; letter-spacing:2px; color:var(--muted);
-    text-transform:uppercase; margin:0 0 14px;
+  h1{ font-size:25px; letter-spacing:.5px; margin-bottom:4px; }
+  .handle{ color:var(--muted); font-size:14px; margin-bottom:12px; }
+  .bio{ font-size:14.5px; color:#3c4a5a; line-height:1.6; max-width:360px; margin:0 auto; }
+
+  .social{ display:flex; justify-content:center; gap:14px; margin:18px 0 4px; }
+  .social a{
+    width:42px; height:42px; border-radius:50%; display:flex;
+    align-items:center; justify-content:center; font-size:19px;
+    background:#fff; box-shadow:var(--shadow); text-decoration:none;
+    transition:transform .15s;
   }
+  .social a:hover{ transform:translateY(-3px); }
+
+  .section{ font-size:12px; letter-spacing:2px; color:var(--muted);
+    text-transform:uppercase; margin:26px 4px 12px; font-weight:600; }
+
   .btn{
     display:flex; align-items:center; gap:14px;
-    width:100%; padding:15px 18px; margin:0 0 12px;
-    border:1px solid var(--line); border-radius:14px;
-    text-decoration:none; color:var(--ink); background:#fff;
-    font-size:16px; font-weight:600; transition:.15s; text-align:left;
+    background:var(--card); border-radius:16px; padding:15px 18px;
+    margin-bottom:12px; text-decoration:none; color:var(--ink);
+    box-shadow:var(--shadow); border-left:4px solid transparent;
+    font-weight:600; font-size:16px; transition:transform .15s, box-shadow .15s;
   }
-  .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(26,26,46,.10); border-color:#cbd5e1; }
-  .btn .ic{ width:26px; text-align:center; font-size:20px; flex:0 0 26px; }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(16,36,63,.13); }
+  .btn .ic{ width:24px; text-align:center; font-size:20px; flex:0 0 24px; }
   .btn .name{ flex:1; }
-  .btn .go{ color:var(--muted); font-size:14px; font-weight:500; }
-  .btn.soon{ opacity:.55; cursor:default; pointer-events:none; }
-  .btn.soon .go{ color:#9ca3af; }
-  .foot{ margin-top:30px; font-size:13px; color:var(--muted); }
-  .foot a{ color:var(--muted); }
-  .rss{ display:inline-block; margin-top:8px; font-size:13px; color:var(--muted); text-decoration:none; border-bottom:1px dashed #cbd5e1; }
+  .btn .go{ color:var(--muted); font-size:18px; }
+  .btn.soon{ opacity:.5; pointer-events:none; }
+  .btn.soon .go{ font-size:12px; font-weight:500; }
+
+  .foot{ text-align:center; margin-top:30px; font-size:13px; color:var(--muted); }
+  .foot a{ color:var(--muted); border-bottom:1px dashed #c7d0db; text-decoration:none; }
+  .foot p{ margin-top:10px; }
 </style>
 </head>
 <body>
   <main class="wrap">
-    <img class="cover" src="assets/cover.jpg" alt="在路上 The Journey 封面">
-    <h1>在路上 The Journey</h1>
-    <p class="by">Johnny and Ryan</p>
-    <p class="tagline">在追求夢想的同時，維持身心最好的狀態。<br>從飲食、睡眠、瑜珈冥想，到創業初衷與生死課題。</p>
+    <div class="profile">
+      <img class="avatar" src="assets/cover.jpg" alt="在路上 The Journey">
+      <h1>在路上 The Journey</h1>
+      <p class="handle">Johnny and Ryan</p>
+      <p class="bio">在追求夢想的同時，維持身心最好的狀態 🌿<br>企業家 × Wellness 專家的真實對話。</p>
+      <div class="social">
+        <a href="https://www.youtube.com/playlist?list=PLmfOOiSp8GwreJ1C7M2Lfgj569zukkrwK" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+        <a href="https://open.spotify.com/show/2svpqwglrQARrTQ5k6fcH7" target="_blank" rel="noopener" aria-label="Spotify">🟢</a>
+        <a href="mailto:johnnyandryan.podcast@gmail.com" aria-label="Email">✉️</a>
+      </div>
+    </div>
 
-    <p class="listen-label">選擇平台收聽</p>
+    <div class="section">▶️ 看影片 & 追蹤我們</div>
+    <a class="btn" style="border-left-color:#ff0000" href="https://www.youtube.com/playlist?list=PLmfOOiSp8GwreJ1C7M2Lfgj569zukkrwK" target="_blank" rel="noopener">
+      <span class="ic">▶️</span><span class="name">YouTube　看影片版訪談</span><span class="go">›</span>
+    </a>
+    <a class="btn soon" style="border-left-color:#E1306C">
+      <span class="ic">📷</span><span class="name">Instagram</span><span class="go">提供連結後啟用</span>
+    </a>
+    <a class="btn soon" style="border-left-color:#1877F2">
+      <span class="ic">👍</span><span class="name">Facebook</span><span class="go">提供連結後啟用</span>
+    </a>
 
-    <a class="btn" href="https://podcasts.apple.com/podcast/id1896864602" target="_blank" rel="noopener">
-      <span class="ic">🍎</span><span class="name">Apple Podcasts</span><span class="go">收聽 ›</span>
+    <div class="section">🎧 收聽 Podcast（選你愛用的平台）</div>
+    <a class="btn" style="border-left-color:#A24BFF" href="https://podcasts.apple.com/podcast/id1896864602" target="_blank" rel="noopener">
+      <span class="ic">🍎</span><span class="name">Apple Podcasts</span><span class="go">›</span>
     </a>
-    <a class="btn" href="https://open.spotify.com/show/2svpqwglrQARrTQ5k6fcH7" target="_blank" rel="noopener">
-      <span class="ic">🟢</span><span class="name">Spotify</span><span class="go">收聽 ›</span>
+    <a class="btn" style="border-left-color:#1DB954" href="https://open.spotify.com/show/2svpqwglrQARrTQ5k6fcH7" target="_blank" rel="noopener">
+      <span class="ic">🟢</span><span class="name">Spotify</span><span class="go">›</span>
     </a>
-    <a class="btn" href="https://podcast.kkbox.com/tw/channel/OoIRdBxuZRSyP2yUvB" target="_blank" rel="noopener">
-      <span class="ic">🎵</span><span class="name">KKBOX</span><span class="go">收聽 ›</span>
+    <a class="btn" style="border-left-color:#00B4DB" href="https://podcast.kkbox.com/tw/channel/OoIRdBxuZRSyP2yUvB" target="_blank" rel="noopener">
+      <span class="ic">🎵</span><span class="name">KKBOX</span><span class="go">›</span>
     </a>
-    <a class="btn" href="https://www.youtube.com/playlist?list=PLmfOOiSp8GwreJ1C7M2Lfgj569zukkrwK" target="_blank" rel="noopener">
-      <span class="ic">▶️</span><span class="name">YouTube</span><span class="go">觀看 ›</span>
+    <a class="btn" style="border-left-color:#00A8E1" href="https://music.amazon.com/podcasts/28d64a38-1490-49cc-8db8-0ae3bd992b6a" target="_blank" rel="noopener">
+      <span class="ic">📦</span><span class="name">Amazon Music</span><span class="go">›</span>
     </a>
-    <a class="btn" href="https://music.youtube.com/playlist?list=PLmfOOiSp8GwreJ1C7M2Lfgj569zukkrwK" target="_blank" rel="noopener">
-      <span class="ic">🎶</span><span class="name">YouTube Music</span><span class="go">收聽 ›</span>
+    <a class="btn" style="border-left-color:#ff0000" href="https://music.youtube.com/playlist?list=PLmfOOiSp8GwreJ1C7M2Lfgj569zukkrwK" target="_blank" rel="noopener">
+      <span class="ic">🎶</span><span class="name">YouTube Music</span><span class="go">›</span>
     </a>
-    <a class="btn" href="https://music.amazon.com/podcasts/28d64a38-1490-49cc-8db8-0ae3bd992b6a" target="_blank" rel="noopener">
-      <span class="ic">📦</span><span class="name">Amazon Music</span><span class="go">收聽 ›</span>
+
+    <div class="section">✉️ 合作 & 來賓邀約</div>
+    <a class="btn" style="border-left-color:#7b8794" href="mailto:johnnyandryan.podcast@gmail.com">
+      <span class="ic">✉️</span><span class="name">寫信給我們</span><span class="go">›</span>
     </a>
 
     <div class="foot">
-      用其他 App 收聽？
-      <br>
-      <a class="rss" href="feed.xml">複製 RSS 連結</a>
-      <p>© 2026 在路上 The Journey · johnnyandryan.podcast@gmail.com</p>
+      用其他 App 收聽？<a href="feed.xml">複製 RSS 連結</a>
+      <p>© 2026 在路上 The Journey</p>
     </div>
   </main>
 </body>
