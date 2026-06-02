@@ -217,9 +217,10 @@ def build_feed(cfg, episodes):
     sub(own, q("itunes", "name"), owner.get("name", author))
     sub(own, q("itunes", "email"), owner.get("email", ""))
 
-    cat = sub(channel, q("itunes", "category"), text=cfg.get("category"))
+    # iTunes 分類要的是 text 屬性，不是元素內文（寫錯 Apple 會退件）
+    cat = ET.SubElement(channel, q("itunes", "category"), {"text": str(cfg.get("category"))})
     if cfg.get("subcategory"):
-        sub(cat, q("itunes", "category"), text=cfg.get("subcategory"))
+        ET.SubElement(cat, q("itunes", "category"), {"text": str(cfg.get("subcategory"))})
 
     # 標準 RSS image
     img = sub(channel, "image")

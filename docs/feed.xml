@@ -16,7 +16,7 @@
 </description>
     <copyright>© 2026 Johnny and Ryan</copyright>
     <generator>podcast-static-publisher</generator>
-    <lastBuildDate>Tue, 02 Jun 2026 17:18:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jun 2026 17:44:30 +0800</lastBuildDate>
     <atom:link rel="self" type="application/rss+xml" href="https://ryan234r32.github.io/the-journey-podcast/feed.xml" />
     <itunes:author>Johnny and Ryan</itunes:author>
     <itunes:summary>Ryan 和 Johnny 一起邀請在人煙稀少道路上前行的企業家與 Wellness 專家，聊聊他們如何在追求夢想
@@ -47,17 +47,35 @@
     <item>
       <title>EP01｜差點死在北大西洋：6000公里海上漂流</title>
       <link>https://github.com/ryan234r32/the-journey-podcast/releases/download/episodes/EP01.mp3</link>
-      <description>【向外實踐的路上】
+      <description>「我曾經被殺人鯨攻擊過，差點死在北大西洋。」
 
-來賓：陳懷璞。一場橫越北大西洋、長達 6000 公里的海上漂流，
-在生死之間，他看見了什麼樣的生命可能性？這一集，我們聊聊冒險、
-恐懼、與在極限處境中對「活著」的重新理解。
+陳懷璞是台大電機系的學生。
+他搭乘一艘無動力帆船，和兩個維京人、兩個德國人隊友一起，橫越 6,000 公里的北大西洋。
+沒有 GPS，他只靠星星定位。
+
+這集你會聽到：
+・為什麼天上有一顆小行星，是以他的名字命名
+・在最浩瀚的大洋中，他看見自己的渺小
+・被十幾隻殺人鯨包圍的那一刻，他做了什麼
+
+也來追蹤他本人 @thehappiest_explorer 最快樂的探險家
+
+#在路上Podcast #陳懷璞 #無動力帆船 #橫越大西洋 #探險家 #台大電機
 </description>
-      <content:encoded>【向外實踐的路上】
+      <content:encoded>「我曾經被殺人鯨攻擊過，差點死在北大西洋。」
 
-來賓：陳懷璞。一場橫越北大西洋、長達 6000 公里的海上漂流，
-在生死之間，他看見了什麼樣的生命可能性？這一集，我們聊聊冒險、
-恐懼、與在極限處境中對「活著」的重新理解。
+陳懷璞是台大電機系的學生。
+他搭乘一艘無動力帆船，和兩個維京人、兩個德國人隊友一起，橫越 6,000 公里的北大西洋。
+沒有 GPS，他只靠星星定位。
+
+這集你會聽到：
+・為什麼天上有一顆小行星，是以他的名字命名
+・在最浩瀚的大洋中，他看見自己的渺小
+・被十幾隻殺人鯨包圍的那一刻，他做了什麼
+
+也來追蹤他本人 @thehappiest_explorer 最快樂的探險家
+
+#在路上Podcast #陳懷璞 #無動力帆船 #橫越大西洋 #探險家 #台大電機
 </content:encoded>
       <enclosure url="https://github.com/ryan234r32/the-journey-podcast/releases/download/episodes/EP01.mp3" length="62283740" type="audio/mpeg" />
       <guid isPermaLink="false">urn:uuid:c422485e-c307-5141-9db9-928da396bc7b</guid>
