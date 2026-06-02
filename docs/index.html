@@ -4,69 +4,63 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>在路上 The Journey — 所有連結</title>
-<meta name="description" content="Ryan 和 Johnny 邀請企業家與 Wellness 專家，聊聊如何在追求夢想的同時維持身心最好的狀態。">
-<meta name="theme-color" content="#0c1830">
+<meta name="description" content="和走在人煙稀少道路上的人，聊夢想、身心與生死。收聽 Podcast、看影片、追蹤我們。">
+<meta name="theme-color" content="#f3f6fb">
 <meta property="og:title" content="在路上 The Journey">
-<meta property="og:description" content="在追求夢想的同時，維持身心最好的狀態。一頁找到所有收聽與追蹤連結。">
-<meta property="og:image" content="https://ryan234r32.github.io/the-journey-podcast/assets/cover.jpg">
+<meta property="og:description" content="和走在人煙稀少道路上的人，聊夢想、身心與生死。一頁找到所有收聽與追蹤連結。">
+<meta property="og:image" content="https://the-journey-jnr.vercel.app/assets/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
+  :root{ --ink:#1c2a3e; --muted:#8a93a3; --shadow:0 4px 16px rgba(28,42,62,.07); }
   *{ box-sizing:border-box; margin:0; padding:0; }
   body{
-    min-height:100vh; color:#fff;
+    min-height:100vh; color:var(--ink);
     font-family:"Noto Sans TC",-apple-system,"PingFang TC","Helvetica Neue",Arial,sans-serif;
     -webkit-font-smoothing:antialiased;
-    /* 由上而下：遮罩(確保文字清楚) → 背景圖(有就用) → 破曉漸層 fallback */
+    /* 淺色遮罩(保文字清楚) → 背景圖(有就用) → 清爽亮色 fallback */
     background:
-      linear-gradient(180deg, rgba(8,15,30,.45) 0%, rgba(8,15,30,.72) 100%),
+      linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.78) 100%),
       url('assets/bg.jpg') center/cover no-repeat,
-      linear-gradient(165deg,#101f38 0%,#27365d 42%,#6a567a 72%,#c79a72 100%);
+      linear-gradient(170deg,#eef4fc 0%,#f4f7fb 45%,#faf6f0 100%);
     background-attachment:fixed;
   }
-  .wrap{ max-width:480px; margin:0 auto; padding:52px 22px 60px; }
-  .profile{ text-align:center; margin-bottom:28px; }
+  .wrap{ max-width:480px; margin:0 auto; padding:48px 22px 60px; }
+  .profile{ text-align:center; margin-bottom:26px; }
   .avatar{
     width:112px; height:112px; border-radius:50%; object-fit:cover;
-    border:3px solid rgba(255,255,255,.85);
-    box-shadow:0 8px 28px rgba(0,0,0,.35); margin-bottom:16px;
+    border:4px solid #fff; box-shadow:0 6px 22px rgba(28,42,62,.13); margin-bottom:15px;
   }
-  h1{ font-size:27px; font-weight:900; letter-spacing:1px; margin-bottom:5px;
-      text-shadow:0 2px 12px rgba(0,0,0,.3); }
-  .handle{ color:rgba(255,255,255,.78); font-size:14px; font-weight:500; margin-bottom:14px; }
-  .bio{ font-size:15px; font-weight:400; color:rgba(255,255,255,.92);
-        line-height:1.7; max-width:360px; margin:0 auto; text-shadow:0 1px 8px rgba(0,0,0,.25); }
+  h1{ font-size:26px; font-weight:900; letter-spacing:1px; margin-bottom:5px; }
+  .handle{ color:var(--muted); font-size:14px; font-weight:500; margin-bottom:13px; }
+  .bio{ font-size:14.5px; font-weight:400; color:#46536a; line-height:1.7; max-width:360px; margin:0 auto; }
 
-  .section{ font-size:11.5px; letter-spacing:3px; color:rgba(255,255,255,.62);
-    text-transform:uppercase; margin:28px 6px 13px; font-weight:700; }
+  .section{ font-size:11.5px; letter-spacing:3px; color:var(--muted);
+    text-transform:uppercase; margin:26px 6px 13px; font-weight:700; }
 
   .btn{
     display:flex; align-items:center; gap:14px;
-    background:rgba(255,255,255,.13);
-    backdrop-filter:blur(14px) saturate(130%);
-    -webkit-backdrop-filter:blur(14px) saturate(130%);
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:17px; padding:10px 16px 10px 10px; margin-bottom:13px;
-    text-decoration:none; color:#fff; font-weight:700; font-size:16px;
-    transition:transform .16s, background .16s;
+    background:#fff; border:1px solid rgba(28,42,62,.06);
+    border-radius:17px; padding:10px 16px 10px 10px; margin-bottom:12px;
+    text-decoration:none; color:var(--ink); box-shadow:var(--shadow);
+    font-weight:700; font-size:16px; transition:transform .16s, box-shadow .16s;
   }
-  .btn:hover{ transform:translateY(-2px); background:rgba(255,255,255,.22); }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 26px rgba(28,42,62,.13); }
   .tile{
     width:46px; height:46px; border-radius:13px; flex:0 0 46px;
     display:flex; align-items:center; justify-content:center;
-    box-shadow:0 3px 10px rgba(0,0,0,.22);
+    box-shadow:0 2px 8px rgba(0,0,0,.16);
   }
   .tile img{ width:24px; height:24px; display:block; }
   .tile.txt{ color:#fff; font-weight:900; font-size:18px; letter-spacing:-1px; font-family:Arial,sans-serif; }
   .name{ flex:1; }
-  .go{ color:rgba(255,255,255,.55); font-size:20px; }
-  .btn.soon{ opacity:.45; pointer-events:none; }
-  .btn.soon .go{ font-size:12px; font-weight:500; }
+  .go{ color:#cdd4de; font-size:20px; }
+  .btn.soon{ opacity:.5; pointer-events:none; }
+  .btn.soon .go{ font-size:12px; font-weight:500; color:var(--muted); }
 
-  .foot{ text-align:center; margin-top:34px; font-size:13px; color:rgba(255,255,255,.6); }
-  .foot a{ color:rgba(255,255,255,.78); border-bottom:1px dashed rgba(255,255,255,.4); text-decoration:none; }
-  .foot p{ margin-top:10px; }
+  .foot{ text-align:center; margin-top:32px; font-size:13px; color:var(--muted); }
 </style>
 </head>
 <body>
@@ -118,10 +112,7 @@
       <span class="name">寫信給我們</span><span class="go">›</span>
     </a>
 
-    <div class="foot">
-      用其他 App 收聽？<a href="feed.xml">複製 RSS 連結</a>
-      <p>© 2026 在路上 The Journey</p>
-    </div>
+    <div class="foot">© 2026 在路上 The Journey</div>
   </main>
 </body>
 </html>
