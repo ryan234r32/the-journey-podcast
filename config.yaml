@@ -45,6 +45,11 @@ audio_base_url: "https://github.com/ryan234r32/the-journey-podcast/releases/down
 # 節目首頁（可填你的網站、Linktree、或先填 base_url）
 website: "https://ryan234r32.github.io/the-journey-podcast"
 
+# --- 數據分析 ---
+# 開啟 OP3（免費開源下載統計）：音檔 enclosure 會加上 op3.dev/e/ 前綴，
+# 讓各平台下載數統一進 op3.dev 儀表板。聽眾無感、隱私友善、有 API 可自動抓。
+op3: true
+
 # --- 封面圖 ---
 # 規格：正方形 JPG/PNG，1400x1400 ~ 3000x3000，RGB。放在 assets/ 下。
 cover_image: "assets/cover.jpg"

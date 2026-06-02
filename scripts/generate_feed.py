@@ -259,6 +259,8 @@ def build_feed(cfg, episodes):
         pub = parse_pubdate(ep.get("pub_date"))
         guid = ep.get("guid") or stable_guid(fn)
         audio_url = f"{audio_base}/{fn}" if audio_base else f"{base}/audio/{fn}"
+        # OP3 下載統計：enclosure 加 op3.dev/e/ 前綴（GUID 不變，不會造成重複集數）
+        enclosure_url = ("https://op3.dev/e/" + re.sub(r'^https?://', '', audio_url)) if cfg.get("op3") else audio_url
         ep_explicit = "true" if ep.get("explicit", cfg.get("explicit")) else "false"
 
         item = sub(channel, "item")
@@ -266,7 +268,7 @@ def build_feed(cfg, episodes):
         sub(item, "link", audio_url)
         cdata(item, "description", ep.get("description", ""))
         cdata(item, q("content", "encoded"), ep.get("description", ""))
-        sub(item, "enclosure", url=audio_url, length=size, type=mime)
+        sub(item, "enclosure", url=enclosure_url, length=size, type=mime)
         sub(item, "guid", guid, isPermaLink="false")
         if pub:
             sub(item, "pubDate", rfc822(pub))
