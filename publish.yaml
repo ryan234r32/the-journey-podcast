@@ -1,0 +1,17 @@
+# ============================================================
+#  發布設定：音檔與 feed 要上傳到哪。
+# ============================================================
+
+# 發布模式：github（用 GitHub Releases + Pages）或 rclone（用 R2/S3）
+mode: github
+
+# --- mode: github 時用這段 ---
+github:
+  repo: "ryan234r32/the-journey-podcast"   # owner/repo
+  release_tag: "episodes"                  # 存放所有音檔的 release tag（固定，勿改）
+  branch: "main"                           # Pages 服務的分支
+
+# --- mode: rclone 時才需要這段（將來搬到 Cloudflare R2 用）---
+rclone_remote: "r2"
+bucket: "podcast-media"
+remote_prefix: ""

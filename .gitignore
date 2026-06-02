@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# 音檔不進 git（改走 GitHub Releases；git 有 100MB 單檔限制）
+*.mp3
+*.m4a
+*.wav
+*.aac
+*.flac
+*.ogg
+*.mp4
+
+# 舊版輸出目錄（已改用 docs/ 給 GitHub Pages）
+public/
+
+# 機密（rclone 金鑰、環境變數）
+rclone.conf
+.env
+
+# 註：docs/ 必須被追蹤（GitHub Pages 從這裡服務 feed 與封面）

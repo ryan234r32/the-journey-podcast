@@ -1,0 +1,56 @@
+# ============================================================
+#  Podcast 節目層級設定（整個節目只填一次）
+#  改完這裡 + episodes.yaml 後，跑 scripts/generate_feed.py 產生 feed
+# ============================================================
+
+# --- 必填：節目基本資訊 ---
+title: "在路上 The Journey"              # 節目名稱（顯示在所有平台）
+description: |
+  Ryan 和 Johnny 一起邀請在人煙稀少道路上前行的企業家與 Wellness 專家，聊聊他們如何在追求夢想
+  的同時，維持身心最好的狀態。從飲食、睡眠、瑜珈冥想，到創業初衷與生死課題——這裡沒有標準答案，
+  只有真實的探索。
+
+  頻道目前有兩個單元：
+  【向內探索的路上】：在瑜珈墊上、在餐桌上、在睡眠中，找回身心的平衡
+  【向外實踐的路上】：在創業中、在冒險中、在生死間，看見生命的可能性
+
+  如果你正在追求夢想，或正經歷身心挑戰，希望這些真實的對話，能給你一些啟發、勇氣和支持。
+
+author: "Johnny and Ryan"               # itunes:author，顯示為「作者」
+language: "zh-tw"                       # 語言代碼，台灣中文用 zh-tw
+
+# --- 必填：擁有者資訊（平台驗證用！）---
+# ⚠️ 這個 email 必須是你「收得到信」的信箱。
+#    Apple / Spotify / KKBOX / Amazon 都會寄驗證碼到這裡。
+owner:
+  name: "Johnny & Ryan"
+  email: "johnnyandryan.podcast@gmail.com"
+
+# --- 必填：分類（Apple 官方分類，最多影響搜尋分流）---
+# 常見：Technology / Business / Education / News / Society & Culture /
+#      Arts / Comedy / Health & Fitness / Leisure / Sports
+category: "Health & Fitness"           # 身心健康為主軸；想偏創業可改 "Business" 或 "Society & Culture"
+subcategory: "Mental Health"           # 可留空；Health & Fitness 下可選 Mental Health / Nutrition 等
+
+# --- 必填：內容分級 ---
+explicit: false                        # 有成人/不雅內容填 true，否則 false
+
+# --- 必填：網址（決定 feed 與音檔放哪）---
+# base_url      = feed 與封面的公開網址根目錄（GitHub Pages），結尾不加 /
+#                 feed 最終網址 = {base_url}/feed.xml
+# audio_base_url= 音檔的公開網址根目錄（GitHub Releases）
+#                 音檔網址 = {audio_base_url}/{檔名}
+# 若改用 Cloudflare R2：把 audio_base_url 刪掉或留空，音檔會改放 {base_url}/audio/{檔名}
+base_url: "https://ryan234r32.github.io/the-journey-podcast"
+audio_base_url: "https://github.com/ryan234r32/the-journey-podcast/releases/download/episodes"
+
+# 節目首頁（可填你的網站、Linktree、或先填 base_url）
+website: "https://ryan234r32.github.io/the-journey-podcast"
+
+# --- 封面圖 ---
+# 規格：正方形 JPG/PNG，1400x1400 ~ 3000x3000，RGB。放在 assets/ 下。
+cover_image: "assets/cover.jpg"
+
+# --- 選填 ---
+copyright: ""                          # 例如 "© 2026 你的名字"，留空則自動帶作者
+podcast_type: "episodic"               # episodic(單集型) 或 serial(連載型)

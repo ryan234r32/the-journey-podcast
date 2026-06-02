@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>在路上 The Journey</title>
+    <link>https://ryan234r32.github.io/the-journey-podcast</link>
+    <language>zh-tw</language>
+    <description>Ryan 和 Johnny 一起邀請在人煙稀少道路上前行的企業家與 Wellness 專家，聊聊他們如何在追求夢想
+的同時，維持身心最好的狀態。從飲食、睡眠、瑜珈冥想，到創業初衷與生死課題——這裡沒有標準答案，
+只有真實的探索。
+
+頻道目前有兩個單元：
+【向內探索的路上】：在瑜珈墊上、在餐桌上、在睡眠中，找回身心的平衡
+【向外實踐的路上】：在創業中、在冒險中、在生死間，看見生命的可能性
+
+如果你正在追求夢想，或正經歷身心挑戰，希望這些真實的對話，能給你一些啟發、勇氣和支持。
+</description>
+    <copyright>© 2026 Johnny and Ryan</copyright>
+    <generator>podcast-static-publisher</generator>
+    <lastBuildDate>Tue, 02 Jun 2026 17:14:15 +0800</lastBuildDate>
+    <atom:link rel="self" type="application/rss+xml" href="https://ryan234r32.github.io/the-journey-podcast/feed.xml" />
+    <itunes:author>Johnny and Ryan</itunes:author>
+    <itunes:summary>Ryan 和 Johnny 一起邀請在人煙稀少道路上前行的企業家與 Wellness 專家，聊聊他們如何在追求夢想
+的同時，維持身心最好的狀態。從飲食、睡眠、瑜珈冥想，到創業初衷與生死課題——這裡沒有標準答案，
+只有真實的探索。
+
+頻道目前有兩個單元：
+【向內探索的路上】：在瑜珈墊上、在餐桌上、在睡眠中，找回身心的平衡
+【向外實踐的路上】：在創業中、在冒險中、在生死間，看見生命的可能性
+
+如果你正在追求夢想，或正經歷身心挑戰，希望這些真實的對話，能給你一些啟發、勇氣和支持。
+</itunes:summary>
+    <itunes:type>episodic</itunes:type>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:image href="https://ryan234r32.github.io/the-journey-podcast/assets/cover.jpg" />
+    <itunes:owner>
+      <itunes:name>Johnny &amp; Ryan</itunes:name>
+      <itunes:email>johnnyandryan.podcast@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:category>Health &amp; Fitness<itunes:category>Mental Health</itunes:category>
+    </itunes:category>
+    <image>
+      <url>https://ryan234r32.github.io/the-journey-podcast/assets/cover.jpg</url>
+      <title>在路上 The Journey</title>
+      <link>https://ryan234r32.github.io/the-journey-podcast</link>
+    </image>
+    <item>
+      <title>EP01｜差點死在北大西洋：6000公里海上漂流</title>
+      <link>https://github.com/ryan234r32/the-journey-podcast/releases/download/episodes/EP01.mp3</link>
+      <description>【向外實踐的路上】
+
+來賓：陳懷璞。一場橫越北大西洋、長達 6000 公里的海上漂流，
+在生死之間，他看見了什麼樣的生命可能性？這一集，我們聊聊冒險、
+恐懼、與在極限處境中對「活著」的重新理解。
+</description>
+      <content:encoded>【向外實踐的路上】
+
+來賓：陳懷璞。一場橫越北大西洋、長達 6000 公里的海上漂流，
+在生死之間，他看見了什麼樣的生命可能性？這一集，我們聊聊冒險、
+恐懼、與在極限處境中對「活著」的重新理解。
+</content:encoded>
+      <enclosure url="https://github.com/ryan234r32/the-journey-podcast/releases/download/episodes/EP01.mp3" length="62283740" type="audio/mpeg" />
+      <guid isPermaLink="false">urn:uuid:c422485e-c307-5141-9db9-928da396bc7b</guid>
+      <pubDate>Tue, 06 Jan 2026 20:00:00 +0800</pubDate>
+      <itunes:duration>1:01:17</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://ryan234r32.github.io/the-journey-podcast/assets/cover.jpg" />
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:episode>1</itunes:episode>
+      <itunes:season>1</itunes:season>
+    </item>
+  </channel>
+</rss>
