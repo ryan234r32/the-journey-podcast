@@ -129,11 +129,18 @@ def sub(parent, tag, text=None, **attrs):
 
 
 def text_to_html(text):
-    """純文字（含換行/空行）→ HTML 段落，給 description / content:encoded，讓各平台正確換行。"""
+    """純文字（含換行/空行）→ HTML 段落，給 description / content:encoded，讓各平台正確換行。
+    並把純網址（http/https）自動轉成可點連結 <a>，讓聽眾在 Apple/Spotify 等可直接點。"""
     text = (text or "").strip()
+    url_re = re.compile(r'(https?://[^\s<]+)')
+
+    def esc_link(ln):
+        # 先 escape 再把網址轉連結（網址不含 < > &，escape 不影響）
+        return url_re.sub(r'<a href="\1">\1</a>', html.escape(ln.strip()))
+
     blocks = []
     for para in re.split(r"\n\s*\n", text):
-        lines = [html.escape(ln.strip()) for ln in para.split("\n") if ln.strip()]
+        lines = [esc_link(ln) for ln in para.split("\n") if ln.strip()]
         if lines:
             blocks.append("<p>" + "<br />".join(lines) + "</p>")
     return "".join(blocks)
