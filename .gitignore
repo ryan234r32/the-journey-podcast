@@ -23,3 +23,6 @@ rclone.conf
 .env
 
 # 註：docs/ 必須被追蹤（GitHub Pages 從這裡服務 feed 與封面）
+
+# 週報產生的 HTML 與 launchd 執行 log（不進版控）
+reports/

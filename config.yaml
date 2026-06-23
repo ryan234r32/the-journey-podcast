@@ -45,6 +45,14 @@ audio_base_url: "https://github.com/ryan234r32/the-journey-podcast/releases/down
 # 節目首頁（可填你的網站、Linktree、或先填 base_url）
 website: "https://ryan234r32.github.io/the-journey-podcast"
 
+# --- 各平台連結（週報用：YouTube 自動抓數據、其餘放一鍵直達後台）---
+platforms:
+  youtube_channel_id: "UCYBNZfmekXZN6yffbCvf_0w"   # 用於自動爬取訂閱/觀看數
+  youtube_url: "https://www.youtube.com/@TheJourney_JnR"
+  apple_id: "1896864602"
+  spotify_show_id: "2svpqwglrQARrTQ5k6fcH7"
+  kkbox_url: "https://podcast.kkbox.com/tw/channel/OoIRdBxuZRSyP2yUvB"
+
 # --- 數據分析 ---
 # 開啟 OP3（免費開源下載統計）：音檔 enclosure 會加上 op3.dev/e/ 前綴，
 # 讓各平台下載數統一進 op3.dev 儀表板。聽眾無感、隱私友善、有 API 可自動抓。
