@@ -49,6 +49,7 @@ website: "https://ryan234r32.github.io/the-journey-podcast"
 platforms:
   youtube_channel_id: "UCYBNZfmekXZN6yffbCvf_0w"   # 用於自動爬取訂閱/觀看數
   youtube_url: "https://www.youtube.com/@TheJourney_JnR"
+  threads_url: "https://www.threads.com/@thejourney.1212"
   apple_id: "1896864602"
   spotify_show_id: "2svpqwglrQARrTQ5k6fcH7"
   kkbox_url: "https://podcast.kkbox.com/tw/channel/OoIRdBxuZRSyP2yUvB"
