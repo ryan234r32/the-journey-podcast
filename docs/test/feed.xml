@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>測試檔案</title>
+    <link>https://ryan234r32.github.io/the-journey-podcast/test/</link>
+    <language>zh-tw</language>
+    <description>測試用節目。</description>
+    <atom:link href="https://ryan234r32.github.io/the-journey-podcast/test/feed.xml" rel="self" type="application/rss+xml" />
+    <itunes:author>測試</itunes:author>
+    <itunes:summary>測試用節目。</itunes:summary>
+    <itunes:image href="https://ryan234r32.github.io/the-journey-podcast/test/cover.jpg" />
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Leisure" />
+    <itunes:owner>
+      <itunes:name>測試</itunes:name>
+      <itunes:email>johnnyandryan.podcast@gmail.com</itunes:email>
+    </itunes:owner>
+    <item>
+      <title>測試檔案</title>
+      <description>測試檔案</description>
+      <enclosure url="https://github.com/ryan234r32/the-journey-podcast/releases/download/test/test01.mp3" length="201262073" type="audio/mpeg" />
+      <guid isPermaLink="false">the-journey-test-ep-001</guid>
+      <pubDate>Mon, 20 Jul 2026 15:00:00 +0800</pubDate>
+      <itunes:duration>2:19:45</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
