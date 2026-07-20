@@ -11,6 +11,12 @@
 
 episodes:
 
+  - file: "test01.mp3"   # 臨時測試集（Ryan 2026-07-20 指示；測完即從 feed 移除）
+    title: "測試檔案"
+    description: |
+      測試檔案（稍後將移除）。
+    pub_date: "2026-07-20 15:02"
+
   - file: "EP04v2.mp3"   # v2＝去冷開場版；換檔名是為了逼 Spotify 重抓音檔（它認網址）
     guid: "urn:uuid:2aff348c-2264-5269-93c3-49c7e5c7b751"   # 固定原 guid（原為 uuid5("EP04.mp3")），各平台才不會多出重複集數
     title: "EP04｜學了十幾種瑜伽，最後每天只做兩件事｜奢華旅遊創辦人 × 瑜伽老師 ft. 維達 Wayne"
